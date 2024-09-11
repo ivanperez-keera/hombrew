@@ -9,8 +9,8 @@ class Copilot < Formula
   depends_on "ghc@9.8" => :build
 
   def install
-    system "cabal", "v2-update"
-    system "cabal", "v2-install", "--lib", *std_cabal_v2_args, "copilot"
+    system "cabal", "update"
+    system "cabal", "install", "--verbose", "--lib", *std_cabal_v2_args, "copilot"
   end
 
 end
