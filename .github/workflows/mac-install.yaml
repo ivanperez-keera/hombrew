@@ -1,0 +1,17 @@
+name: Install on OSX
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install copilot
+        run: |
+          brew install --from-source copilot.rb
+      - name: Confirm that it runs
+        run: |
+          ghci <<< 'import Language.Copilot; main = putStrLn "Success"'
