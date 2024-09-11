@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Install copilot
         run: |
-          brew install --from-source copilot.rb
+          brew install --build-from-source copilot.rb
       - name: Confirm that it runs
         run: |
           ghci <<< 'import Language.Copilot; main = putStrLn "Success"'
