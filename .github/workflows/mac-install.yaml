@@ -16,6 +16,7 @@ jobs:
         run: |
           ls
           pwd
+          brew update
           brew install -v --build-from-source copilot.rb
       - name: Confirm that it runs
         run: |
