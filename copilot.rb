@@ -4,6 +4,7 @@ class Copilot < Formula
   sha256 "2addad1ce0bfea20598b9d84866bee47e12118bcaa11f3a7a041e397fae00063"
   license "0BSD"
   revision 1
+  version 4.0
 
   depends_on "cabal-install" => :build
   depends_on "ghc@9.8" => :build
