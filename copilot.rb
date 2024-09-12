@@ -11,7 +11,7 @@ class Copilot < Formula
 
   def install
     system "cabal", "update"
-    system "cabal", "install", "--package-db", "#{prefix}/lib/packagedb", "--lib", *std_cabal_v2_args, "copilot-core"
+    system "cabal", "install", "-no-user-package-db", "--package-db", "#{prefix}/lib/packagedb", "--package-env", "#{prefix}/lib/packages.env", "--lib", *std_cabal_v2_args, "copilot-core"
     # system "cabal", "install", "--package-db", "#{prefix}/lib/packagedb", "--package-env", "#{prefix}/lib/packages.env", "--lib", *std_cabal_v2_args, "copilot"
     man1.install "doc/copilot.1"
   end
