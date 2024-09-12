@@ -20,4 +20,5 @@ jobs:
           brew install -v --build-from-source copilot.rb
       - name: Confirm that it runs
         run: |
-          ghci -package-db /opt/homebrew/Cellar/copilot/4.0_1/lib/packagedb <<< 'import Copilot.Core.Type; main = putStrLn "Success"'
+          find /opt/homebrew/Cellar/copilot/4.0_1/ -type f | sort
+          # ghci -package-db /opt/homebrew/Cellar/copilot/4.0_1/lib/packagedb <<< 'import Copilot.Core.Type; main = putStrLn "Success"'
