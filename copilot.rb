@@ -13,7 +13,7 @@ class Copilot < Formula
     system "cabal", "install", "--verbose", "--lib", *std_cabal_v2_args, "copilot"
     system "ls"
     system "pwd"
-    man1.install "copilot.1"
+    man1.install "../copilot.1"
   end
 
 end
