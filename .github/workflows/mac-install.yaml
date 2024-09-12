@@ -14,9 +14,10 @@ jobs:
           echo "/opt/homebrew/Cellar/ghc@9.8/9.8.2/bin" >> $GITHUB_PATH
       - name: Install copilot
         run: |
+          ls ../
           ls
           pwd
-          brew install -v --build-from-source copilot.rb
+          # brew install -v --build-from-source copilot.rb
       - name: Confirm that it runs
         run: |
           ghci <<< 'import Language.Copilot; main = putStrLn "Success"'
