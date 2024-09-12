@@ -11,7 +11,7 @@ class Copilot < Formula
 
   def install
     system "cabal", "update"
-    system "cabal", "install", "--verbose", "--lib", *std_cabal_v2_args, "copilot"
+    system "cabal", "install", "--lib", *std_cabal_v2_args, "copilot"
     man1.install "doc/copilot.1"
   end
 
