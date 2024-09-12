@@ -20,4 +20,4 @@ jobs:
           brew install -v --build-from-source copilot.rb
       - name: Confirm that it runs
         run: |
-          ghci <<< 'import Language.Copilot; main = putStrLn "Success"'
+          cabal --package-env /opt/homebrew/Cellar/copilot/4.0/lib run -- ghci <<< 'import Language.Copilot; main = putStrLn "Success"'
